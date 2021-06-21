@@ -1,0 +1,44 @@
+{
+  "name": "simple-geometry",
+  "version": "0.0.1",
+  "license": "AGPL v3",
+  "type": "module",
+  "module": "./src/index.ts",
+  "types": "./dist/types/index.d.ts",
+  "author": {
+    "name": "onsummer",
+    "url": "https://github.com/onsummer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onsummer/simple-geometry"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*/*.{ts,js,json}": [
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.ts",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@rollup/plugin-image": "^2.0.6",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-url": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
+    "rollup": "^2.52.2",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-ts": "^1.4.0",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.4",
+    "husky": "^6.0.0"
+  }
+}
